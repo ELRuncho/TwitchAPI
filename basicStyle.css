@@ -1,5 +1,10 @@
 .bod{
-	background-color: #635768;
+	background-color: #0173C7;
+}
+
+hr{
+  margin:auto;
+  width: 100%
 }
 
 h1 {
@@ -22,21 +27,21 @@ a {
 #btn1 {
   float: right;
   right: -65px;
-  top: 1px;
+  top: -12px;
   background-color: #FBFF6F;
 }
 
 #btn2 {
   float: right;
   right: -65px;
-  top: 6px;
+  top: -7px;
   background-color: #19EB96;
 }
 
 #btn3 {
   float: right;
   right: -65px;
-  top: 11px;
+  top: -2px;
   background-color: #FF8370;
 }
 
@@ -70,7 +75,7 @@ div.button:active {
 
 .title{
 	color: white;
-	font-family: verdana, sans-serif;
+	font-family: Abel, sans-serif;
 }
 
 .logo{
@@ -80,4 +85,25 @@ div.button:active {
   margin-left: 10px;
   box-shadow: 0 0 0 3px #fff;
   box-sizing: border-box;
+}
+.wrapper{
+  height: 90px;
+  background-color: #19EB96;
+  
+}
+.wrapper2{
+  height: 90px;
+  background-color: #FF8370;
+}
+.result1{
+  font-family: Helvetica, sans-serif;
+  font-size: 0.75em;
+}
+.result2{
+  font-family: Helvetica, sans-serif;
+  font-size: 0.75em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 228px;
 }
