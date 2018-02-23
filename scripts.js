@@ -109,12 +109,10 @@ function render1(json){
 	var html="";
 	for(var key in json){
 		if(json[key].stream !=null ){
-			html+='<img class="logo" src="'+json[key].stream.logo+'">'+'<a class="result" href="'+json[key]._links.channel+'">'+json[key].stream.display_name+'</a>'+
-			' <p class="result">'+json[key].stream.status+'</p>'+'</a><hr>';
-			console.log(json[key].stream.mature);
+			html+='<div class="wrapper">'+'<div id="logo">'+'<img class="logo" src="'+json[key].stream.logo+'">'+'</div>'+'<div id="link">'+'<a class="result1" href="'+json[key]._links.channel+'">'+json[key].stream.display_name+'</a>'+'</div>'+
+			'<div id="status">'+' <p class="result2">'+json[key].stream.status+'</p>'+'</div>'+'</div><hr>';
 		}else if(json[key].hasOwnProperty('display_name')){
-			html+="<img class='logo' src='"+dumy+"'>"+"<a class='result' href='"+json[key]._links.channel+"'>"+json[key].display_name+"</a>"+" <p class='result'>"+"offline"+"</p>"+"</a><hr>";
-			console.log(json[key]);
+			html+='<div class="wrapper2">'+'<div id="logo">'+'<img class="logo" src="'+dumy+'">'+'</div>'+'<div id="link">'+'<a class="result1" href="'+json[key]._links.channel+'">'+json[key].display_name+'</a>'+'</div>'+'<div id="status">'+' <p class="result2">'+'offline'+'</p>'+'</div>'+'</div><hr>';
 		}
 	}
 		html += "</a><br>";
@@ -125,8 +123,8 @@ function render2(json){
 	var html="";
 	for(var key in json){
 		if(json[key].stream !=null ){
-			html+='<a class="result" href="'+json[key]._links.channel+'">'+json[key].stream.display_name+'</a>'+
-			' <div>'+json[key].stream.status+'</div>'+'</a><hr>';
+			html+='<div class="wrapper">'+'<div id="logo">'+'<img class="logo" src="'+json[key].stream.logo+'">'+'</div>'+'<div id="link">'+'<a class="result1" href="'+json[key]._links.channel+'">'+json[key].stream.display_name+'</a>'+'</div>'+
+			'<div id="status">'+' <p class="result2">'+json[key].stream.status+'</p>'+'</div>'+'</div><hr>';
 		}
 	}
 		html += "</a><br>";
@@ -137,7 +135,7 @@ function render3(json){
 	var html="";
 	for(var key in json){
 		if(json[key].hasOwnProperty('display_name')){
-			html+="<a class='result' href='"+json[key]._links.channel+"'>"+json[key].display_name+"</a>"+" <div>"+"offline"+"</div>"+"</a><hr>";
+			html+='<div class="wrapper2">'+'<div id="logo">'+'<img class="logo" src="'+dumy+'">'+'</div>'+'<div id="link">'+'<a class="result1" href="'+json[key]._links.channel+'">'+json[key].display_name+'</a>'+'</div>'+'<div id="status">'+' <p class="result2">'+'offline'+'</p>'+'</div>'+'</div><hr>';
 		}
 	}
 		html += "</a><br>";
@@ -145,7 +143,7 @@ function render3(json){
 }
 
 $(document).ready(function (){
-	//console.log(online);
+	
 	$('#btn1').on("click", function() {
 		render1(twitch);
 	});
